@@ -30,6 +30,17 @@ button {
   justify-content: center;
   height: 55px;
   font-size: 18px;
+  transition: 400ms ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--dark-gray);
+  color: #fff;
+}
+
+button:active {
+  transform: scale(0.92);
 }
 
 .App {
@@ -54,6 +65,7 @@ button {
   height: 65px;
   font-size: 34px;
   padding-right: 6px;
+  letter-spacing: 2px;
 }
 
 .operator {
