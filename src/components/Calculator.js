@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
-export default function Calculator() {
+const Calculator = () => {
   const [item, setItem] = useState({
     total: 0,
     next: null,
@@ -40,4 +40,6 @@ export default function Calculator() {
       <button type="button" className="operator" name="=" onClick={clickButton}>=</button>
     </section>
   );
-}
+};
+
+export default Calculator;
