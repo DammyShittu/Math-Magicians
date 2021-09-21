@@ -8,19 +8,17 @@
 Kindly click [here](https://dammyshittu.github.io/Math-Magicians/) to view the live demo of the app.
 
 # Screenshots
+## Home
 
-<table>
-  <tr>
-    <td>Home</td>
-     <td>Calculator</td>
-     <td>Quote</td>
-  </tr>
-  <tr>
-    <td><img src="./src/images/home.png" width=780px height=400></td>
-    <td><img src="./src/images/calculator.png" width=780 height=400></td>
-    <td><img src="./src/images/quotes.png" width=780 height=400></td>
-  </tr>
- </table>
+![](/src/images/home.png)
+
+## Calculator
+
+![](src/images/calculator.png)
+
+## Quote
+
+![](src/images/quotes.png)
 
 # Getting Started
 
