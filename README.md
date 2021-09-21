@@ -7,9 +7,18 @@
 
 Kindly click [here](https://dammyshittu.github.io/Math-Magicians/) to view the live demo of the app.
 
-# Screenshot
+# Screenshots
+## Home
 
-![](src/images/screenshot.png)
+![](/src/images/home.png)
+
+## Calculator
+
+![](src/images/calculator.png)
+
+## Quote
+
+![](src/images/quotes.png)
 
 # Getting Started
 

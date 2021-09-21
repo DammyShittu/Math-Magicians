@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
 :root {
   --orange: #f5913e;
   --light-gray: #e0e0e0;
   --dark-gray: #858693;
+  --white: #fff;
 }
 
 * {
@@ -11,14 +14,87 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Itim', cursive;
   line-height: 1.5;
   width: 100%;
   height: 100%;
+  background-color: #333;
+  color: var(--white);
+}
+
+/* Navbar Styling */
+header {
+  width: 100%;
+  background-color: rgb(53, 51, 51);
+  box-shadow: 0 3px 13px 0 rgba(104, 100, 100, 0.59);
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.navbar,
+.home-div,
+blockquote {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--orange);
+  cursor: pointer;
+  padding-bottom: 2px;
+  transition: 300ms;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+  border-bottom: 1px solid #f4f4f4;
+  transform: scale(0.85);
+}
+
+.current {
+  color: var(--white);
+  opacity: 1;
+}
+
+/* Home Page Styling */
+.home-div {
+  margin-top: 60px;
+  text-align: justify;
+}
+
+.home-div h2 {
+  text-align: center;
+  padding-bottom: 25px;
+  font-size: 30px;
+}
+
+.home-div p {
+  padding-bottom: 18px;
 }
 
 button,
-.App,
+.calculator-page,
 .result {
   display: flex;
   align-items: center;
@@ -36,7 +112,7 @@ button {
 
 button:hover {
   background-color: var(--dark-gray);
-  color: #fff;
+  color: var(--white);
 }
 
 button:active {
@@ -44,9 +120,20 @@ button:active {
 }
 
 .App {
-  height: 100vh;
+  height: 100%;
   width: 100%;
+}
+
+.calculator-page {
+  flex-direction: column;
+  height: 100vh;
   justify-content: center;
+}
+
+.calculator-page aside {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: var(--orange);
 }
 
 .calculator-section {
@@ -54,13 +141,14 @@ button:active {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  box-shadow: 0 3px 13px 0 rgba(204, 182, 182, 0.59);
   background-color: var(--light-gray);
 }
 
 .result {
   grid-column: 1 / span 4;
   justify-content: flex-end;
-  color: #fff;
+  color: var(--white);
   background-color: var(--dark-gray);
   height: 65px;
   font-size: 34px;
@@ -77,6 +165,16 @@ button:active {
 }
 
 @media all and (min-width: 768px) {
+  .navbar {
+    height: 40px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .navbar ul li {
+    margin-right: 15px;
+  }
+
   .calculator-section {
     width: 60%;
     margin: 0 auto;
@@ -88,8 +186,50 @@ button:active {
 }
 
 @media all and (min-width: 1024px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .navbar {
+    height: 55px;
+  }
+
+  .navbar ul li {
+    border-right: 1px solid var(--light-gray);
+    padding-right: 10px;
+  }
+
+  .navbar ul li:nth-child(3) {
+    border-right: none;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
+
+  .home-div h2 {
+    text-align: start;
+    font-size: 40px;
+  }
+
+  .home-div p {
+    font-size: 18px;
+  }
+
+  .calculator-page {
+    width: 90%;
+    margin: 0 auto;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 10%;
+  }
+
+  .calculator-page aside {
+    align-self: flex-start;
+  }
+
   .calculator-section {
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
   }
 
@@ -100,5 +240,9 @@ button:active {
   .result {
     height: 80px;
     font-size: 40px;
+  }
+
+  blockquote {
+    font-size: 18px;
   }
 }
