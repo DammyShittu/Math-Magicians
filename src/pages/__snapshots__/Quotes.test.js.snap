@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<blockquote
+  style={
+    Object {
+      "marginTop": "10%",
+    }
+  }
+>
+  The definition of a good mathematical problem is the mathematics it generates, rather than the problem itself. ~Andrew Wiles
+</blockquote>
+`;
