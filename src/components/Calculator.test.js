@@ -1,12 +1,63 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render, screen, fireEvent } from '@testing-library/react';
 import Calculator from './Calculator';
 
+describe('Calculator', () => {
+  test('checks key press', () => {
+    render(<Calculator />);
 
-it('renders correctly', () => {
-  const calculator = renderer
-    .create(<Calculator />
-    )
-    .toJSON();
-  expect(calculator).toMatchSnapshot();
+    const five = screen.getByText('5');
+    const two = screen.getByText('2');
+    const result = screen.getByRole('none');
+    fireEvent.click(five);
+    fireEvent.click(two);
+
+    expect(result.innerHTML).toBe('52');
+  });
+
+  test('multiplies correctly', () => {
+    render(<Calculator />);
+
+    const five = screen.getByText('5');
+    const two = screen.getByText('2');
+    const multiply = screen.getByText('x');
+    const equal = screen.getByText('=');
+    const result = screen.getByRole('none');
+    fireEvent.click(five);
+    fireEvent.click(multiply);
+    fireEvent.click(two);
+    fireEvent.click(equal);
+
+    expect(result.innerHTML).toBe('10');
+  });
+
+  test('changes operator', () => {
+    render(<Calculator />);
+
+    const eight = screen.getByText('8');
+    const multiply = screen.getByText('x');
+    const minus = screen.getByText('-');
+    const result = screen.getByRole('none');
+    fireEvent.click(eight);
+    fireEvent.click(multiply);
+    fireEvent.click(minus);
+
+    expect(result.innerHTML).toEqual('8-');
+  });
+
+  test('Divide correctly ', () => {
+    render(<Calculator />);
+
+    const eight = screen.getByText('8');
+    const divide = screen.getByText('÷');
+    const two = screen.getByText('2');
+    const equal = screen.getByText('=');
+    const result = screen.getByRole('none');
+    fireEvent.click(eight);
+    fireEvent.click(divide);
+    fireEvent.click(two);
+    fireEvent.click(equal);
+
+    expect(result.innerHTML).toBe('4');
+  });
 });

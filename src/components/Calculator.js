@@ -16,7 +16,7 @@ const Calculator = () => {
     <div className="calculator-page">
       <aside>Let&apos;s do some maths!</aside>
       <section className="calculator-section">
-        <p className="result">
+        <p className="result" role="none">
           {item.total}
           {item.operation}
           {item.next}
