@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Calculator from './Calculator';
+import Calculator from '../components/Calculator';
 
 describe('Calculator', () => {
   test('checks key press', () => {
