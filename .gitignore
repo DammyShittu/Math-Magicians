@@ -8,6 +8,7 @@
 # testing
 /coverage
 .eslintrc.json
+.babelrc
 
 # production
 /build
