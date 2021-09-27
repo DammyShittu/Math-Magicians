@@ -5,7 +5,11 @@
 
 # Live Link
 
-Kindly click [here](https://dammyshittu.github.io/Math-Magicians/) to view the live demo of the app.
+This app is hosted on two hosting platforms, Netlify and Heroku.
+
+[Netlify](https://maths-magicians.netlify.app/)
+
+[Heroku](https://maths-magicians.herokuapp.com/)
 
 # Screenshots
 ## Home
